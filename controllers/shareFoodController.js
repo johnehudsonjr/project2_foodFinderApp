@@ -3,7 +3,7 @@ ShareFood = require("../models/foodLocation")
 const shareFoodController = {
     index: (req, res) => {
         ShareFood.find({}).then(locations =>{
-            res.render('app/index')
+            res.render('app/index', {locations})
         })
     },
 
