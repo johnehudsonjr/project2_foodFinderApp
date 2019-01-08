@@ -1,8 +1,8 @@
-ShareFood = require("../models/foodLocation")
+ShareFoodLocation = require("../models/foodLocation")
 
-const shareFoodController = {
+const shareLocationController = {
     index: (req, res) => {
-        ShareFood.find({}).then(locations =>{
+        ShareFoodLocation.find({}).then(locations =>{
             res.render('app/index', {locations})
         })
     },
@@ -12,7 +12,7 @@ const shareFoodController = {
     },
 
     create: (req, res) => {
-        ShareFood.create({
+        ShareFoodLocation.create({
             buildingName: req.body.buildingName,
             floorNumber: req.body.floorNumber,
             roomNameNumber: req.body.roomNameNumber,
@@ -24,4 +24,4 @@ const shareFoodController = {
 
 }
 
-module.exports = shareFoodController
+module.exports = shareLocationController

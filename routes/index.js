@@ -1,13 +1,13 @@
 // Requirement information
 const express = require('express')
 const router = express.Router()
-const shareFoodController = require('../controllers/shareFoodController')
+const shareLocationController = require('../controllers/shareLocationController')
 
 
 
-router.get('/', shareFoodController.index)
-router.post('/', shareFoodController.create)
-router.get('/sharefood', shareFoodController.new)
+router.get('/', shareLocationController.index)
+router.post('/', shareLocationController.create)
+router.get('/sharefood', shareLocationController.new)
 
 
 

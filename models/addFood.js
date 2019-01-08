@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const ShareFood = new Schema({
+const addFood = new Schema({
     img: String,
     sharedBy: String,
     notes: String,
@@ -9,4 +9,4 @@ const ShareFood = new Schema({
     createdAt: String,
 });
 
-module.exports = mongoose.model("ShareFood", ShareFood)
+module.exports = mongoose.model("addFood", addFood)
