@@ -1,1 +1,20 @@
 <h1>LOCATE FOOD</h1>
+
+<div>
+  {{#each locations}}
+  <a href="{{_id}}">
+  <div class="row">
+    <div class="col s12 m5">
+        <div class="card-panel green">
+          <h5> {{buildingName}}</h5>
+          <span class="white-text">
+            <h6>{{availableFood}}</h6>
+          </span>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+{{/each}}
+</div>
