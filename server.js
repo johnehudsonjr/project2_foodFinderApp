@@ -1,13 +1,18 @@
 const express = require('express')
 const app = express()
 const router = require('./routes/index')
+const methodOverride = require('method-override')
+
+
 
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'))
+
 app.use(express.json());
 
 app.use(express.static('public'))
-
 app.use('/', router)
+
 app.set('view engine', 'hbs')
 
 // process.env.PORT is necessary for deployment to Heroku
