@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const FoodLocation = new Schema({
     buildingName: String,
-    floorNumber: Number,
+    floorNumber: String,
     roomNameNumber: String,
     availableFood: String
 });

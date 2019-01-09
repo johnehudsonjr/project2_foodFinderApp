@@ -4,12 +4,10 @@ const router = require('./routes/index')
 const methodOverride = require('method-override')
 
 
-
+// middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
-
 app.use(express.json());
-
 app.use(express.static('public'))
 app.use('/', router)
 
