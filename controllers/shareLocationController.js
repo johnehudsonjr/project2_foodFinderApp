@@ -1,9 +1,11 @@
 ShareFoodLocation = require("../models/foodLocation")
 
 const shareLocationController = {
+    
     index: (req, res) => {
         ShareFoodLocation.find({}).then(locations =>{
-            res.render('app/index', {locations})
+            // res.render('app/index', {locations}) 
+            res.render('app/index')
         })
     },
 
@@ -18,14 +20,14 @@ const shareLocationController = {
             roomNameNumber: req.body.roomNameNumber,
             availableFood: req.body.availableFood
         }).then(newLocation => {
-            res.redirect('/')
+            res.redirect('/') 
         })
     },
+
 
     show: (req, res) =>{
         const locationID = req.params.id
         ShareFoodLocation.findById(locationID).then((location) => {
-
             res.render('app/showSpecificLocation', {location})
         })
     },
@@ -36,7 +38,6 @@ const shareLocationController = {
             res.redirect('/')
         })
     }
-
 }
 
 module.exports = shareLocationController
