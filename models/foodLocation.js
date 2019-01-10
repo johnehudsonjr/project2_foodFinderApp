@@ -5,7 +5,10 @@ const FoodLocation = new Schema({
     buildingName: String,
     floorNumber: String,
     roomNameNumber: String,
-    availableFood: String
+    availFood: [{
+        type: Schema.Types.ObjectId,
+        ref:'addFood'
+    }]
 });
 
 module.exports = mongoose.model("FoodLocation", FoodLocation)

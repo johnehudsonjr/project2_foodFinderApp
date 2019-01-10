@@ -5,7 +5,6 @@ const addFood = new Schema({
     img: String,
     sharedBy: String,
     notes: String,
-    img: String,
     createdAt: String,
 });
 

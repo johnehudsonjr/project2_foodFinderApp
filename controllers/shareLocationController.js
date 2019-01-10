@@ -2,11 +2,7 @@ ShareFoodLocation = require("../models/foodLocation")
 
 const shareLocationController = {
     
-    // index: (req, res) => {
-    //     ShareFoodLocation.find({}).then(locations =>{
-    //         res.render('app/index', {locations}) 
-    //     })
-    // },
+    
     index: (req, res) => {
         res.render('app/index') 
 
