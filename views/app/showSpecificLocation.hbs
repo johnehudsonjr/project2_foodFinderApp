@@ -3,17 +3,29 @@
 {{!-- THIS SHOWS WHAT IS ON LOCATION CARD--}}
 
 <div>
-    <h1>{{location.buildingName}}</h1>
+ <div>
+        <form action="/{{location._id}}?_method=DELETE" method="POST">
+            <button class="btn" type="submit"> DELETE 🚮 </button>
+        </form>
+        </div>
+    <h1>Building Info</h1>
+    <h4>{{location.buildingName}}</h4>
     <h4>{{location.floorNumber}}</h4>
     <h4>{{location.roomNameNumber}}</h4>
     <h4>{{location.availableFood}}</h4>
 
-<form action="/{{location._id}}?_method=DELETE" method= "POST">
-        <button class="btn" type="submit"> Delete</button>
-</form>
+    <a href="/{{location._id}}/update"><button class="btn">Update Location</button></a>
+    <div>
+        <h1>Available Food</h1>
+        <h3>THIS IS WHERE ADD FOOD SHOULD GO</h3>
+    </div>
 
-<form action="/{{location._id}}?_method=DELETE" method= "POST">
- <button class="btn" type="submit">ADD</button>
-</form>
-
+    <div class="showviewdiv">
+       
+        <div>
+        <form action="/{{location._id}}?_method=DELETE" method="POST">
+            <button class="btn" type="submit">ADD</button>
+        </form>
+        </div>
+    </div>
 </div>

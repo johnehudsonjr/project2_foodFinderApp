@@ -43,7 +43,20 @@ const shareLocationController = {
             res.render('app/showSpecificLocation', {location})
         })
     },
+    
+    edit:(req, res) =>{
+    const locationID = req.params.id
+        res.render('app/update', {locationID})
+    },
 
+    update: (req,res) =>{
+    const locationID = req.params.id
+    ShareFoodLocation.findByIdAndUpdate(locationID, req.body, {new: true}).then((location)=>{
+        res.redirect(`/${locationID}`)
+    })
+
+    },
+    
     delete: (req, res) => {
         const locationID = req.params.id
         ShareFoodLocation.findByIdAndRemove(locationID).then(()=>{

@@ -1,15 +1,9 @@
-{{!-- THIS IS THE LOCATION INFO INPUT PAGE --}}
-{{!-- THIS IS THE LOCATION INFO INPUT PAGE --}}
-{{!-- THIS IS THE LOCATION INFO INPUT PAGE --}}
+{{!-- UPDATE LOCATION PAGE --}}
+{{!-- UPDATE LOCATION PAGE --}}
 
-<div>
-    <h1> Food Location Form</h1>
-    <h3>Step. 1 is to create a location of where the food is located.</h3>
-</div>
-
-<div>
-    <form action="/" method="POST">
-        <div class="field">
+{{locationID}}
+<form action="/{{locationID}}?_method=PATCH" method="POST">
+    <div class="field">
             <label class="label">Where's The Food?</label>
             <div class="control">
             <input class="input" type="text" name="buildingName" placeholder="e.g Building Name">
@@ -35,6 +29,5 @@
             <input class="input" type="text" placeholder="e.g. We have cheese pizza. 3 slices!">
             </div>
         </div>
-        <button class="button is-success" type="submit">Share The Location</button>
-    </form>
-</div>
+        <button class="button is-success" type="submit">Submit Update</button>
+</form>

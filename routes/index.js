@@ -16,6 +16,8 @@ router.get('/', shareLocationController.index)
 router.get('/sharefood', shareLocationController.new)
 router.post('/', shareLocationController.create) 
 router.get('/:id', shareLocationController.show)
+router.get('/:id/update', shareLocationController.edit)
+router.patch('/:id', shareLocationController.update)
 router.delete('/:id',shareLocationController.delete)
 
 // findfood
