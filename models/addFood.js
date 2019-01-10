@@ -1,11 +1,12 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const addFood = new Schema({
+const AddFood = new Schema({
     img: String,
+    food: String,
     sharedBy: String,
     notes: String,
-    createdAt: String,
+    date: String,
 });
 
-module.exports = mongoose.model("addFood", addFood)
+module.exports = mongoose.model("AddFood", AddFood)

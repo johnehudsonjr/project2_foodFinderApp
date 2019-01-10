@@ -7,7 +7,7 @@ const FoodLocation = new Schema({
     roomNameNumber: String,
     availFood: [{
         type: Schema.Types.ObjectId,
-        ref:'addFood'
+        ref:'AddFood'
     }]
 });
 
