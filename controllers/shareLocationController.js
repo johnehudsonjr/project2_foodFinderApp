@@ -4,12 +4,12 @@ const shareLocationController = {
     
     
     index: (req, res) => {
-        res.render('app/index') 
+        res.render('homepage/index') 
 
     },
 
     index2: (req, res) => {
-        ShareFoodLocation.find({}).then(locations =>{
+        ShareFoodLocation.find({}).populate('availFood').then(locations =>{
             res.render('app/findfood', {locations}) 
         })
     },
@@ -35,8 +35,9 @@ const shareLocationController = {
 
     show: (req, res) =>{
         const locationID = req.params.id
-        ShareFoodLocation.findById(locationID).then((location) => {
-            res.render('app/showSpecificLocation', {location})
+        ShareFoodLocation.findById(locationID).populate("availFood").then((location) => {
+            const availFood = location.availFood
+            res.render('app/showSpecificLocation', {location, availFood})
         })
     },
     

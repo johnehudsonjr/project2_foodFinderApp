@@ -1,0 +1,47 @@
+{{!-- THIS IS THE ADD FOOD PAGE --}}
+{{!-- THIS IS THE ADD FOOD PAGE --}}
+{{!-- THIS IS THE ADD FOOD PAGE --}}
+
+<div >
+    <h1> Add Food Form</h1>
+    <h3>Step. 1 is to create a location of where the food is located.</h3>
+</div>
+
+<div style="margin: 20px auto; width: 50vw; height:70vh;">
+    <form action="/{{locationID}}/addfood" method="POST">
+        <div class="field">
+            <label class="label">Insert An Image </label>
+            <div class="control">
+            <input class="input" type="text" name="img" placeholder="e.g Add An Image!">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">What's for grabs?</label>
+            <div class="control">
+            <input class="input" name="food" type="text" placeholder="e.g. Cheese Pizza from Pizzaroos!!">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Anything your colleagues should know?</label>
+            <div class="control">
+            <input class="input" type="text" placeholder="e.g. Last person, throw the rest away! or Nut allergies?">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Insert Your Name</label>
+            <div class="control">
+            <input class="input"  name="roomNameNumber" type="text" placeholder="e.g. Robinson-4111">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Today's Date</label>
+            <div class="control">
+            <input class="input" type="text" placeholder="e.g. May 21st or 05/21">
+            </div>
+        </div>
+        
+        <button class="button is-success" type="submit">Submit Food</button>
+    </form>
+</div>

@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 const AddFood = new Schema({
     img: String,
     food: String,
-    sharedBy: String,
     notes: String,
+    sharedBy: String,
     date: String,
 });
 

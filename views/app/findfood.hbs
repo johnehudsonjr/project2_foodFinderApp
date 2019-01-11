@@ -18,25 +18,29 @@
 {{/each}}
 </div>
 
-
+<div style="display:flex; flex-wrap: wrap;">
 {{#each locations}}
-<div class="card has-text-centered is-wide">
-  
-    <header class="card-header">
-      Header info
-    </header>
-    <div class="card-content">
-      <h1>
-        Heading
-      </h1>
-      <p>
-        First line.<br/>
-        Second line.
-      </p>
-    </div>
-    <footer class="card-footer">
-      &copy; 2017 Footer info
-    </footer>
-  
+<div class="card" style="margin:10px; min-width:400px; max-width:400px; height:350px;">
+  <div class="card-content">
+    <p class="title">
+      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    </p>
+    <p class="subtitle">
+      Jeff Atwood
+    </p>
   </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+        Share on <a href="#">Facebook</a>
+      </span>
+    </p>
+  </footer>
+</div>
   {{/each}}
+  </div>
