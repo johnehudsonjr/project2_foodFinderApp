@@ -6,7 +6,7 @@ const addFoodController = require('../controllers/addFoodController')
 const subscriberListController = require('../controllers/subscriberListController')
 
 // findfood
-router.get('/findfood', shareLocationController.index2)
+router.get('/findfood', shareLocationController.index)
 router.get('/findfood', shareLocationController.new2)
 
 router.get('/subscribe', subscriberListController.index)
