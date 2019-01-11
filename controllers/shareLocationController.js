@@ -7,7 +7,7 @@ const shareLocationController = {
     
     index2: (req, res) => {
         ShareFoodLocation.find({}).populate('availFood').then(locations =>{
-            res.render('addFoodView/addfood', {locations}) 
+            res.render('app/sharefood', {locations}) 
         })
     },
 
