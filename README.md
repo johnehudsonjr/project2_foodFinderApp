@@ -1,4 +1,4 @@
-#Food Finder App
+#Office Food Finder App 
 Overview
 For project #2, I created an app that allows an individual to find free food in their office space or school.
 
