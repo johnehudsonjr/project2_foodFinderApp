@@ -1,5 +1,5 @@
 const FoodLocation = require('../models/foodLocation')
-const ShareFood = require('../models/shareFood')
+const ShareFood = require('../models/AddFood')
 
 FoodLocation.deleteMany({})
     .then(()=> {
