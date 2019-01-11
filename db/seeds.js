@@ -10,7 +10,7 @@ FoodLocation.deleteMany({})
             availFood: []
         }).then((newLocation) =>{
 
-            const createFood = AddFood.create({
+            const createFood = ShareFood.create({
                 img:"https://en.wikipedia.org/wiki/Pizza#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg",
                 food: "Pizza!",
                 notes: "Last person please throw away the container",
@@ -20,7 +20,7 @@ FoodLocation.deleteMany({})
                 newLocation.availFood.push(createdFood)
             })
 
-            const createFood2 = AddFood.create({
+            const createFood2 = ShareFood.create({
                 img:"https://pngimage.net/wp-content/uploads/2018/06/sub-png-1.png",
                 food: "Turkey and Ham Sandwiches!!",
                 notes: "From the operations Team",
@@ -32,7 +32,7 @@ FoodLocation.deleteMany({})
 
             Promise.all([createFood, createFood2])
             .then(()=>{
-                newsLocation.save()
+                newLocation.save()
             })
 
 
