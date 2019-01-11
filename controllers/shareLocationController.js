@@ -16,7 +16,10 @@ const shareLocationController = {
     },
 
     new2: (req, res) =>{
-        res.render('app/findfood')
+        ShareFoodLocation.find({}).then(locations => {
+           res.render('app/findfood', {locations}) 
+        })
+        
     },
 
     create: (req, res) => {

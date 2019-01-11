@@ -17,11 +17,12 @@ router.get('/findfood', shareLocationController.new2)
 
 // Share Location
 router.get('/', shareLocationController.index)
+
 router.get('/sharefood', shareLocationController.index2)
 router.get('/sharefood/new', shareLocationController.new)
 router.post('/', shareLocationController.create) 
 
-router.get('/findfood', shareLocationController.show)
+router.get('/', shareLocationController.show)
 
 router.get('/:id', shareLocationController.show)
 router.get('/:id/update', shareLocationController.edit)
