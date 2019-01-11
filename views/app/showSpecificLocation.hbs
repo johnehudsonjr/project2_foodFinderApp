@@ -1,6 +1,7 @@
 {{!-- THIS SHOWS WHAT IS ON LOCATION CARD--}}
 {{!-- THIS SHOWS WHAT IS ON LOCATION CARD--}}
 {{!-- THIS SHOWS WHAT IS ON LOCATION CARD--}}
+
 <div style="display:flex; padding-right: 5px;" class="div">
     <a style="margin-left:360px;" class="button is-success is-outlined" href="/findfood">BACK</a>
 <form style="margin-left:50px" action="/{{location._id}}?_method=DELETE" method="POST">
@@ -27,27 +28,34 @@
             <button style="margin-top:8px; font-size:12px;" class="button is-success" type="submit">ADD FOOD</button>
         </form>
     </div>
-        <div style="display:flex; flex-wrap: wrap; justify-content: center;">
-            {{!-- EDIT THIS AREA NEED TO MAKE CARD --}}
-            
-            
-            {{#each availFood }}
-                <h1>{{img}}</h1>
-                <h1>{{food}}</h1>
-                <h1>{{notes}}</h1>
-                <h1>{{sharedBy}}</h1>
-                <h1>{{date}}</h1>
 
 
-
-                {{!-- TESTING --}}
-                    <form action="/{{availFood._id}}?_method=DELETE" method="POST">
-                        <button class="btn" type="submit"> DELETE 🚮 </button>
-                    </form>
-                {{!-- TESTING --}}
-            {{/each}}
-
-
-
+<div style="display:flex; flex-wrap: wrap; justify-content: center;">
+  {{#each availFood}}
+    <div class="card" style="margin:10px; min-width:400px; max-width:400px; height:225px;">
+      <div class="card-content">
+        <p class="title " style="font-size: 40px; text-align:center; ">
+          {{food}}
+        </p>
+        <br>
+        <p class="subtitle">
+          <b>Notes:</b> <span>{{notes}}</span>
+          <br>
+          <b> Shared By:</b> <span>{{sharedBy}}</span>
+        </p>
+      </div>
+<form action="/{{../location._id}}/{{_id}}?_method=DELETE" method="POST">
+                <button class="button is-success" type="submit"> DELETE 🚮 </button>
+            </form>
     </div>
+    {{/each}}
+
+</div>
+
+
+
+
+
+
+
 </div>

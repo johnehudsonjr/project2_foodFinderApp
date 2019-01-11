@@ -24,13 +24,13 @@ const addFoodController = {
         })
     },
     
-// TEST
-    delete: (req, res) => {
+
+    delete: (req, res) =>{
         const locationID= req.params.id
         const newFood = req.params.newFood
-        AddFood.findByIdAndDelete(newFood)
+        ShareFoodLocation.findByIdAndDelete(newFood)
             .then(() => {
-                res.redirect(`/${FoodArray._id}`)
+                res.redirect(`/${locationID}`)
             })
     }
    

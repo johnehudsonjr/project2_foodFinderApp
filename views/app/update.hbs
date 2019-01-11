@@ -2,6 +2,11 @@
 {{!-- UPDATE LOCATION PAGE --}}
 
 {{locationID}}
+<div >
+    <p style="text-align: center;" class="title">Make An Update</p>
+    <h3 style="text-align: center;">Fill out the form below to update this location!</h3>
+</div>
+<div style="margin: 20px auto; width: 50vw; height:70vh;">
 <form action="/{{locationID}}?_method=PATCH" method="POST">
     <div class="field">
             <label class="label">Where's The Food?</label>
@@ -23,11 +28,7 @@
             <input class="input"  name="roomNameNumber" type="text" placeholder="e.g. Robinson-4111">
             </div>
         </div>
-        <div class="field">
-            <label class="label">What kind of food is available?</label>
-            <div class="control">
-            <input class="input" type="text" placeholder="e.g. We have cheese pizza. 3 slices!">
-            </div>
-        </div>
+    
         <button class="button is-success" type="submit">Submit Update</button>
 </form>
+</div>

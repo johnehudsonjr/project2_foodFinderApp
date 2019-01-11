@@ -1,35 +1,31 @@
 <h1 style="color:hsl(141, 71%, 48%);font-size:50px; text-align: center;">Find Food🍴</h1>
-<p style="text-align:center; " class="subtitle">Click on a building tile below to <b><i>SHARE</i></b> food or see what's out there!</p>
+<p style="text-align:center; " class="subtitle">Click on a building tile below to <b><i>SHARE</i></b> food or see
+  what's out there!</p>
 <i></i>
-{{!-- <div>
-  {{#each locations}}
-  <a href="{{_id}}">
-          <h5> {{buildingName}}</h5>
-            <h6>{{floorNumber}}</h6>
-            <h6>{{roomNameNumber}}</h6>
-{{/each}}
-</div> --}}
 
 <br>
 <br>
+
+
+
 <div style="display:flex; flex-wrap: wrap; justify-content: center;">
-{{#each locations}}
-<a href="{{_id}}">
-<div class="card" style="margin:10px; min-width:400px; max-width:400px; height:225px;">
-  <div class="card-content">
-    <p class="title " style="font-size: 40px; text-align:center; ">
-  
-      {{buildingName}}
-    </p>
-    <br>
-    <p class="subtitle">
-  
-      <b>Floor Number:</b>  <span>{{floorNumber}}</span>
-      <br>
-      <b> Room Name/Number:</b> <span>{{roomNameNumber}}</span>
-    </p>
-  </div>
-  
+  {{#each locations}}
+  <a href="{{_id}}">
+    <div class="card" style="margin:10px; min-width:400px; max-width:400px; height:225px;">
+      <div class="card-content">
+        <p class="title " style="font-size: 40px; text-align:center; ">
+
+          {{buildingName}}
+        </p>
+        <br>
+        <p class="subtitle">
+
+          <b>Floor Number:</b> <span>{{floorNumber}}</span>
+          <br>
+          <b> Room Name/Number:</b> <span>{{roomNameNumber}}</span>
+        </p>
+      </div>
+
+    </div>
+    {{/each}}
 </div>
-  {{/each}}
-  </div>
