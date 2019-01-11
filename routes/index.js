@@ -14,7 +14,8 @@ router.post('/subscribe', subscriberListController.create)
 
 // Share Location
 router.get('/', shareLocationController.index)
-router.get('/sharefood', shareLocationController.new)
+router.get('/sharefood', shareLocationController.index)
+router.get('/sharefood/new', shareLocationController.new)
 router.post('/', shareLocationController.create) 
 router.get('/:id', shareLocationController.show)
 router.get('/:id/update', shareLocationController.edit)

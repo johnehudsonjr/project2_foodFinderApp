@@ -15,11 +15,11 @@ const shareLocationController = {
     },
 
     new: (req, res) =>{
-        res.render('app/shareFood')
+        res.render('app/sharefood')
     },
 
     new2: (req, res) =>{
-        res.render('app/findFood')
+        res.render('app/findfood')
     },
 
     create: (req, res) => {
