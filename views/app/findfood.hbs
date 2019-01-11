@@ -1,46 +1,35 @@
-<h1>LOCATE FOOD</h1>
-
-<div>
+<h1 style="color:hsl(141, 71%, 48%);font-size:50px; text-align: center;">Find Food🍴</h1>
+<p style="text-align:center; " class="subtitle">Click on a building tile below to <b><i>SHARE</i></b> food or see what's out there!</p>
+<i></i>
+{{!-- <div>
   {{#each locations}}
   <a href="{{_id}}">
-  <div class="row">
-    <div class="col s12 m5">
-        <div class="card-panel green">
           <h5> {{buildingName}}</h5>
-          <span class="white-text">
-            <h6>{{availableFood}}</h6>
-          </span>
-      </a>
-
-    </div>
-  </div>
-</div>
+            <h6>{{floorNumber}}</h6>
+            <h6>{{roomNameNumber}}</h6>
 {{/each}}
-</div>
+</div> --}}
 
-<div style="display:flex; flex-wrap: wrap;">
+<br>
+<br>
+<div style="display:flex; flex-wrap: wrap; justify-content: center;">
 {{#each locations}}
-<div class="card" style="margin:10px; min-width:400px; max-width:400px; height:350px;">
+<a href="{{_id}}">
+<div class="card" style="margin:10px; min-width:400px; max-width:400px; height:225px;">
   <div class="card-content">
-    <p class="title">
-      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    <p class="title " style="font-size: 40px; text-align:center; ">
+  
+      {{buildingName}}
     </p>
+    <br>
     <p class="subtitle">
-      Jeff Atwood
+  
+      <b>Floor Number:</b>  <span>{{floorNumber}}</span>
+      <br>
+      <b> Room Name/Number:</b> <span>{{roomNameNumber}}</span>
     </p>
   </div>
-  <footer class="card-footer">
-    <p class="card-footer-item">
-      <span>
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-      </span>
-    </p>
-    <p class="card-footer-item">
-      <span>
-        Share on <a href="#">Facebook</a>
-      </span>
-    </p>
-  </footer>
+  
 </div>
   {{/each}}
   </div>
