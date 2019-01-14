@@ -6,29 +6,23 @@ const addFoodController = require('../controllers/addFoodController')
 const subscriberListController = require('../controllers/subscriberListController')
 
 
-router.get('/subscribe', subscriberListController.index)
-router.post('/subscribe', subscriberListController.create)
+// router.get('/subscribe', subscriberListController.index)
+// router.post('/subscribe', subscriberListController.create)
 
 
-// findfood
-
-router.get('/findfood', shareLocationController.new2) 
 
 
-// Share Location
+
 router.get('/', shareLocationController.index)
-
 router.get('/sharefood', shareLocationController.index2)
 router.get('/sharefood/new', shareLocationController.new)
+router.get('/findfood', shareLocationController.new2) 
 router.post('/', shareLocationController.create) 
-
-router.get('/', shareLocationController.show)
-
+router.get('/', shareLocationController.show) 
 router.get('/:id', shareLocationController.show)
 router.get('/:id/update', shareLocationController.edit)
 router.patch('/:id', shareLocationController.update)
 router.delete('/:id', shareLocationController.delete)
-
 
 
 // Add Food
